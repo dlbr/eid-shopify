@@ -31,6 +31,6 @@ shopify-build:
 	$(PNPM) exec shopify app build
 shopify-age-filter-status:
 	@test -n "$(SHOPIFY_STORE)" || { echo "Set SHOPIFY_STORE to the development store domain."; exit 1; }
-	$(PNPM) exec shopify app execute --store "$(SHOPIFY_STORE)" --version 2026-10 --no-input --query-file scripts/shopify-age-filter-status.graphql
+	node scripts/age-filter-status.mjs "$(SHOPIFY_STORE)"
 clean:
 	rm -rf dist coverage reports
