@@ -9,7 +9,7 @@ export type WalletEvent =
   | { type: "start"; attempt: string }
   | { type: "created"; attempt: string; expiresAt: number; now: number }
   | { type: "status"; attempt: string; status: "PENDING" | "VERIFIED" | "REJECTED" | "FAILED" | "EXPIRED"; now: number }
-  | { type: "tick"; now: number }
+  | { type: "tick"; attempt: string; now: number }
   | { type: "error"; attempt: string }
   | { type: "cancel" }
   | { type: "reset" };
@@ -26,7 +26,7 @@ export function walletState(state: WalletState, event: WalletEvent): WalletState
       ? { phase: "cancelled", attempt: state.attempt } : state;
   }
   if (event.type === "tick") {
-    return state.phase === "pending" && Number.isFinite(event.now) && event.now >= state.expiresAt
+    return state.phase === "pending" && event.attempt === state.attempt && Number.isFinite(event.now) && event.now >= state.expiresAt
       ? { phase: "expired", attempt: state.attempt } : state;
   }
   if (state.phase !== "starting" && state.phase !== "pending") return state;
@@ -47,4 +47,9 @@ export function walletState(state: WalletState, event: WalletEvent): WalletState
     case "REJECTED": return { phase: "rejected", attempt: state.attempt };
     case "FAILED": return { phase: "unavailable", attempt: state.attempt };
   }
+}
+
+/** Translation key for presentation only; a verified result does not approve checkout. */
+export function walletStatusKey(state: WalletState): string {
+  return `walletStatus.${state.phase}`;
 }

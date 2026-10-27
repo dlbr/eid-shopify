@@ -2,5 +2,15 @@
   "requiredHeading": "Altersprüfung erforderlich (18+)",
   "requiredBody": "Die Altersprüfung per Wallet ist derzeit nicht verfügbar. Bitte kontaktiere den Shop, bevor du diese Bestellung aufgibst.",
   "unknownHeading": "Status der Altersprüfung nicht verfügbar",
-  "unknownBody": "Die Anforderungen dieses Shops zur Altersprüfung können derzeit nicht geprüft werden. Bitte kontaktiere den Shop, bevor du altersbeschränkte Produkte bestellst."
+  "unknownBody": "Die Anforderungen dieses Shops zur Altersprüfung können derzeit nicht geprüft werden. Bitte kontaktiere den Shop, bevor du altersbeschränkte Produkte bestellst.",
+  "walletStatus": {
+    "idle": "Die Altersprüfung wurde noch nicht gestartet.",
+    "starting": "Die Wallet-Prüfung wird gestartet…",
+    "pending": "Warten auf deine Wallet.",
+    "verified": "Die Wallet-Prüfung ist abgeschlossen. Die Freigabe des Checkouts ist noch nicht verfügbar.",
+    "rejected": "Die Wallet hat den erforderlichen Altersnachweis nicht bereitgestellt.",
+    "expired": "Die Prüfungssitzung ist abgelaufen. Starte erneut, um es noch einmal zu versuchen.",
+    "unavailable": "Die Wallet-Prüfung ist derzeit nicht verfügbar. Bitte versuche es später erneut.",
+    "cancelled": "Die Wallet-Prüfung wurde abgebrochen."
+  }
 }
