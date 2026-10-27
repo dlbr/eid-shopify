@@ -28,6 +28,8 @@ test("wallet status component renders all translations without network or checko
       for (const phase of ["idle", "starting", "pending", "verified", "rejected", "expired", "unavailable", "cancelled"]) {
         await page.evaluate(value => window.dispatchEvent(new CustomEvent("wallet:state", { detail: { phase: value, attempt: "test", expiresAt: 100 } })), phase);
         await expect(page.locator("s-paragraph")).toHaveText(messages.walletStatus[phase]!);
+        const tone = ["rejected", "expired", "unavailable"].includes(phase) ? "warning" : "info";
+        await expect(page.locator("s-banner")).toHaveAttribute("tone", tone);
       }
       assert.equal(await page.locator("button,s-button,input,a").count(), 0);
       assert.equal(requests, 0);

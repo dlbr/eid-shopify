@@ -6,7 +6,7 @@ The panel reads the app-owned shop policy and requirements for products currentl
 
 `src/wallet-state.ts` is a standalone, display-only state model for a future wallet interface. It models pending, verified, rejected, expired, unavailable and cancelled states and ignores late responses from prior attempts. A caller must use a unique attempt ID for each new attempt. Its clock inputs are for display and must never establish verification validity or checkout authorization. The current checkout block does not use this model or start wallet sessions.
 
-`src/WalletStatus.jsx` renders localized status text for that model. It is not mounted in the current checkout block. A future panel must provide accessible status announcements and lifecycle management when it integrates this component.
+`src/WalletStatus.jsx` renders localized status text in a Shopify banner, which Shopify documents as a live region. It is not mounted in the current checkout block. Browser tests check markup and translations using simulated host signals; screen-reader announcements must still be verified in the real Shopify checkout. A future panel must manage the wallet lifecycle when it integrates this component.
 
 Network access, Storefront API access and progress blocking are disabled. The extension makes no backend requests, retrieves no session tokens, writes no cart metadata and presents no verification button. It does not activate the validation Function.
 
