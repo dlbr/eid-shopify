@@ -1,0 +1,12 @@
+{
+  "name": "DLBR EID age policy",
+  "heading": "DLBR EID age verification",
+  "required": "Require age verification for this product (18+)",
+  "allProducts": "Age verification is currently required for every product in this store.",
+  "unavailable": "Checkout verification is still in development.",
+  "save": "Save",
+  "reload": "Reload",
+  "saved": "Saved.",
+  "loadError": "Unable to load the product setting. Reload and try again.",
+  "saveError": "Unable to confirm the save. Reload the setting before trying again."
+}
