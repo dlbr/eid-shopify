@@ -1,0 +1,37 @@
+# Copy to the ignored shopify.app.toml and fill values from a REAL development app.
+# For local development builds only. Do not deploy this example configuration.
+client_id = ""
+name = "DLBR EID"
+application_url = ""
+embedded = true
+# Exclude the diagnostic cart-binding probe from a release configuration.
+extension_directories = ["extensions/age-checkout", "extensions/age-validation"]
+
+[build]
+automatically_update_urls_on_dev = false
+include_config_on_deploy = false
+
+[webhooks]
+api_version = "2026-10"
+
+[[webhooks.subscriptions]]
+topics = ["app/uninstalled"]
+uri = "/webhooks/app-uninstalled"
+
+[access_scopes]
+scopes = "write_products,write_validations"
+
+[auth]
+redirect_urls = []
+
+[product.metafields.app.requires_age_verification]
+type = "boolean"
+name = "Requires age verification"
+description = "Products requiring wallet age verification. Checkout enforcement is not yet enabled."
+access.admin = "merchant_read_write"
+
+[shop.metafields.app.all_products_require_age_verification]
+type = "boolean"
+name = "Require age verification for all products (18+)"
+description = "Store-wide age-verification policy. Checkout enforcement is not yet enabled."
+access.admin = "merchant_read"
