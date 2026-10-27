@@ -1,0 +1,6 @@
+{
+  "requiredHeading": "Age verification required (18+)",
+  "requiredBody": "Wallet age verification is currently unavailable. Please contact the store before placing this order.",
+  "unknownHeading": "Age verification status unavailable",
+  "unknownBody": "We cannot check this store's age-verification requirements. Please contact the store before placing an age-restricted order."
+}

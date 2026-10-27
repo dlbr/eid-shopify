@@ -1,0 +1,14 @@
+{
+  "shop": {
+    "allProductsAgeRestricted": {
+      "value": "true"
+    }
+  },
+  "buyerJourney": {
+    "step": "CHECKOUT_COMPLETION"
+  },
+  "cart": {
+    "lines": [],
+    "bindingProbe": null
+  }
+}

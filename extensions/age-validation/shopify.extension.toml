@@ -1,0 +1,17 @@
+api_version = "2026-10"
+
+[[extensions]]
+name = "DLBR EID age verification prototype"
+handle = "dlbr-eid-age-validation"
+uid = "82ae3257-5ec4-56c2-bb64-90b34aee3a54b8a0a786"
+type = "function"
+description = "Development only: blocks protected checkout completion while secure cart binding is implemented."
+
+  [[extensions.targeting]]
+  target = "cart.validations.generate.run"
+  input_query = "src/cart_validations_generate_run.graphql"
+  export = "cart-validations-generate-run"
+
+  [extensions.build]
+  command = ""
+  path = "dist/function.wasm"

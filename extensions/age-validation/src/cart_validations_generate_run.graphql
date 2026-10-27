@@ -1,0 +1,24 @@
+query CartValidationsGenerateRunInput {
+  shop {
+    allProductsAgeRestricted: metafield(namespace: "$app", key: "all_products_require_age_verification") { value }
+  }
+  buyerJourney {
+    step
+  }
+  cart {
+    bindingProbe: metafield(namespace: "$app", key: "binding_probe") { value }
+    lines {
+      id
+      merchandise {
+        __typename
+        ... on ProductVariant {
+          product {
+            ageRestricted: metafield(namespace: "$app", key: "requires_age_verification") {
+              value
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "eid-shopify",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "EUDI wallet age verification for Shopify through the DLBR EID Gateway",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.ts",
+    "coverage": "node scripts/coverage.mjs",
+    "check": "make check",
+    "shopify": "shopify"
+  },
+  "dependencies": {
+    "jose": "^6.2.13"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261025.1",
+    "@playwright/test": "^1.64.1",
+    "@shopify/cli": "^4.9.4",
+    "@types/node": "^26.6.5",
+    "esbuild": "^0.28.2",
+    "miniflare": "5.20261019.2-beta",
+    "typescript": "^7.0.2",
+    "wrangler": "^4.152.0"
+  },
+  "packageManager": "pnpm@12.15.0"
+}

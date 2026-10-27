@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact",
+    "target": "ES2020",
+    "checkJs": true,
+    "allowJs": true,
+    "strict": true,
+    "allowImportingTsExtensions": true,
+    "moduleResolution": "Bundler",
+    "esModuleInterop": true,
+    "noEmit": true,
+    "skipLibCheck": true
+  },
+  "include": ["./src", "./shopify.d.ts"]
+}

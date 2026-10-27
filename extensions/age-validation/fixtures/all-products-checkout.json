@@ -1,0 +1,24 @@
+{
+  "shop": {
+    "allProductsAgeRestricted": {
+      "value": "true"
+    }
+  },
+  "buyerJourney": {
+    "step": "CHECKOUT_COMPLETION"
+  },
+  "cart": {
+    "lines": [
+      {
+        "merchandise": {
+          "__typename": "ProductVariant",
+          "product": {
+            "ageRestricted": null
+          }
+        },
+        "id": "gid://shopify/CartLine/fixture-1"
+      }
+    ],
+    "bindingProbe": null
+  }
+}

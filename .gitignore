@@ -1,0 +1,16 @@
+node_modules/
+dist/
+coverage/
+reports/
+.wrangler/
+.shopify/
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+.env
+.env.*
+!.env.example
+shopify.app.toml
+*.tsbuildinfo
+.DS_Store
+extensions/*/dist/

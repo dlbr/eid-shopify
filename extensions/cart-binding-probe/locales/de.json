@@ -1,0 +1,13 @@
+{
+  "heading": "Entwicklungstest für Warenkorb-Metafelder",
+  "description": "Nur Diagnose. Dieser Block prüft kein Alter und gibt keinen Kauf frei.",
+  "serverVisible": "Die Server-Markierung ist in diesem Warenkorb sichtbar.",
+  "clientVisible": "Die Client-Markierung ist sichtbar. Die Bestätigung durch die Function steht noch aus.",
+  "missing": "Die Server-Markierung ist nicht sichtbar. Öffnen Sie den serverseitig erstellten Test-Checkout.",
+  "unsupported": "Warenkorb-Metafelder können in diesem Checkout nicht geändert werden.",
+  "overwrite": "Client-Schreibversuch starten",
+  "writing": "Wird geschrieben…",
+  "submitting": "Die Shopify-Antwort steht noch aus.",
+  "accepted": "Shopify hat den Schreibaufruf angenommen. Der Empfang durch die Function ist noch nicht bestätigt.",
+  "rejected": "Der Schreibversuch ist fehlgeschlagen oder wurde abgelehnt. Das beweist noch keinen ausschließlich serverseitigen Zugriff."
+}

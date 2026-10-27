@@ -1,0 +1,13 @@
+{
+  "heading": "Development cart metafield probe",
+  "description": "Diagnostic only. This panel does not verify age or approve checkout.",
+  "serverVisible": "The server marker is visible on this cart.",
+  "clientVisible": "The client marker is visible on this cart. Function confirmation is still required.",
+  "missing": "The server marker is not visible on this cart. Open the server-created diagnostic checkout.",
+  "unsupported": "Cart metafield changes are unavailable in this checkout.",
+  "overwrite": "Attempt client overwrite",
+  "writing": "Writing…",
+  "submitting": "Waiting for the Shopify write result.",
+  "accepted": "Shopify accepted the write call. This does not prove that the Function received the value.",
+  "rejected": "The client write failed or was rejected. This alone does not prove server-only access."
+}

@@ -1,0 +1,19 @@
+{
+  "buyerJourney": {
+    "step": "CHECKOUT_COMPLETION"
+  },
+  "cart": {
+    "lines": [
+      {
+        "merchandise": {
+          "__typename": "CustomProduct"
+        },
+        "id": "gid://shopify/CartLine/fixture-1"
+      }
+    ],
+    "bindingProbe": null
+  },
+  "shop": {
+    "allProductsAgeRestricted": null
+  }
+}

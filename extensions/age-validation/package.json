@@ -1,0 +1,34 @@
+{
+  "name": "@eid-shopify/age-validation",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "shopify app function build",
+    "schema": "shopify app function schema"
+  },
+  "dependencies": {
+    "@shopify/shopify_function": "2.0.1"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "5.0.6",
+    "@graphql-codegen/typescript": "4.1.6",
+    "@graphql-codegen/typescript-operations": "4.6.1",
+    "graphql": "^16.14.2"
+  },
+  "codegen": {
+    "schema": "schema.graphql",
+    "documents": "src/*.graphql",
+    "generates": {
+      "generated/api.ts": {
+        "plugins": [
+          "typescript",
+          "typescript-operations"
+        ],
+        "config": {
+          "enumsAsTypes": true
+        }
+      }
+    }
+  }
+}
