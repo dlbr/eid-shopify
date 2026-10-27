@@ -32,6 +32,7 @@ type = "boolean"
 name = "Requires age verification"
 description = "Require wallet age verification for this product. Checkout verification is still in development."
 access.admin = "merchant_read_write"
+capabilities.admin_filterable = true
 
 [shop.metafields.app.all_products_require_age_verification]
 type = "boolean"

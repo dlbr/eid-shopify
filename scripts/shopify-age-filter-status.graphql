@@ -1,0 +1,11 @@
+query ProductAgeFilterStatus {
+  metafieldDefinitions(first: 1, ownerType: PRODUCT, namespace: "$app", key: "requires_age_verification") {
+    nodes {
+      namespace
+      key
+      capabilities {
+        adminFilterable { eligible enabled status }
+      }
+    }
+  }
+}

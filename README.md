@@ -8,6 +8,10 @@ This repository contains the Shopify product Admin block, checkout UI extension,
 
 The product Admin block edits an individual product's 18+ flag using Shopify's Admin API. A merchant adds the block to the product details page; the store-wide setting still applies to all products when enabled. The block has local tests with simulated Shopify responses. Its placement and saving in Shopify Admin must still be confirmed in a development store. See the [product block](extensions/age-product-policy/README.md).
 
+The product metafield is configured for filtering in Shopify Admin. In Products, use search and filter → Add filter → Metafields → Requires age verification. The development store exposed this filter while Shopify reported `adminFilterable.status = IN_PROGRESS` and returned all products, so do not rely on it until the status is `FILTERABLE` and its results are verified. The filter matches the saved per-product value; products without a value may not match `false`, and the global policy can require verification for all products regardless of this filter.
+
+Run `make shopify-age-filter-status SHOPIFY_STORE=your-development-store.myshopify.com` to inspect the definition status using the linked development app and Shopify CLI. An empty definition list or any status other than `FILTERABLE` does not confirm that the filter works.
+
 ## Development
 
 Requires Make, Node.js 22.18+ and pnpm 12.15.0.

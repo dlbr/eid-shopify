@@ -1,9 +1,11 @@
 PNPM ?= pnpm
+SHOPIFY_STORE ?=
 .DEFAULT_GOAL := help
-.PHONY: help install typecheck test coverage browser-install browser-test check function-build function-test shopify-build clean
+.PHONY: help install typecheck test coverage browser-install browser-test check function-build function-test shopify-build shopify-age-filter-status clean
 help:
 	@echo "make check         Typecheck, coverage and browser E2E"
 	@echo "make function-test Run Shopify Function WASM fixtures (linked app)"
+	@echo "make shopify-age-filter-status SHOPIFY_STORE=...  Inspect the product filter status"
 install:
 	$(PNPM) install --frozen-lockfile
 typecheck:
@@ -27,5 +29,8 @@ function-test: function-build
 	node scripts/function-tests.mjs
 shopify-build:
 	$(PNPM) exec shopify app build
+shopify-age-filter-status:
+	@test -n "$(SHOPIFY_STORE)" || { echo "Set SHOPIFY_STORE to the development store domain."; exit 1; }
+	$(PNPM) exec shopify app execute --store "$(SHOPIFY_STORE)" --version 2026-10 --no-input --query-file scripts/shopify-age-filter-status.graphql
 clean:
 	rm -rf dist coverage reports
