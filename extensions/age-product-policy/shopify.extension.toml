@@ -1,0 +1,11 @@
+api_version = "2026-07"
+
+[[extensions]]
+name = "t:name"
+handle = "age-product-policy"
+type = "ui_extension"
+uid = "0e535c28-b734-d81b-1443-9a27291440ee84bdc4be"
+
+[[extensions.targeting]]
+module = "./src/BlockExtension.jsx"
+target = "admin.product-details.block.render"

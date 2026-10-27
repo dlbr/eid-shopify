@@ -9,6 +9,7 @@ install:
 typecheck:
 	$(PNPM) typecheck
 	$(PNPM) --filter age-checkout typecheck
+	$(PNPM) --filter age-product-policy typecheck
 	$(PNPM) --filter cart-binding-probe typecheck
 test:
 	$(PNPM) test

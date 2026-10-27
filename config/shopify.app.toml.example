@@ -5,11 +5,10 @@ name = "DLBR EID"
 application_url = ""
 embedded = true
 # Exclude the diagnostic cart-binding probe from a release configuration.
-extension_directories = ["extensions/age-checkout", "extensions/age-validation"]
+extension_directories = ["extensions/age-checkout", "extensions/age-validation", "extensions/age-product-policy"]
 
 [build]
 automatically_update_urls_on_dev = false
-include_config_on_deploy = false
 
 [webhooks]
 api_version = "2026-10"
@@ -17,6 +16,10 @@ api_version = "2026-10"
 [[webhooks.subscriptions]]
 topics = ["app/uninstalled"]
 uri = "/webhooks/app-uninstalled"
+
+[[webhooks.subscriptions]]
+compliance_topics = ["customers/data_request", "customers/redact", "shop/redact"]
+uri = "/webhooks/compliance"
 
 [access_scopes]
 scopes = "write_products,write_validations"
@@ -27,7 +30,7 @@ redirect_urls = []
 [product.metafields.app.requires_age_verification]
 type = "boolean"
 name = "Requires age verification"
-description = "Products requiring wallet age verification. Checkout enforcement is not yet enabled."
+description = "Require wallet age verification for this product. Checkout verification is still in development."
 access.admin = "merchant_read_write"
 
 [shop.metafields.app.all_products_require_age_verification]

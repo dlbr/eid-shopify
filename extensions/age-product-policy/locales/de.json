@@ -1,0 +1,12 @@
+{
+  "name": "DLBR EID Altersprüfung",
+  "heading": "DLBR EID Altersprüfung",
+  "required": "Altersprüfung für dieses Produkt verlangen (18+)",
+  "allProducts": "Die Altersprüfung ist derzeit für alle Produkte dieses Shops erforderlich.",
+  "unavailable": "Die Altersprüfung im Checkout befindet sich noch in Entwicklung.",
+  "save": "Speichern",
+  "reload": "Neu laden",
+  "saved": "Gespeichert.",
+  "loadError": "Die Produkteinstellung konnte nicht geladen werden. Bitte neu laden und erneut versuchen.",
+  "saveError": "Das Speichern konnte nicht bestätigt werden. Bitte vor einem erneuten Versuch neu laden."
+}
