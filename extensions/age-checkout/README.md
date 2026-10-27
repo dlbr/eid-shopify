@@ -4,6 +4,8 @@ Read-only Plus checkout block at `purchase.checkout.block.render`, API 2026-10. 
 
 The panel reads the app-owned shop policy and requirements for products currently in the cart. A protected nonempty cart displays an English/German 18+ warning explaining that wallet verification is unavailable. Unknown or malformed shop policy displays an unavailable status. An explicitly unprotected cart or empty cart renders no panel. This is display logic, never a checkout approval.
 
+`src/wallet-state.ts` is a standalone, display-only state model for a future wallet interface. It models pending, verified, rejected, expired, unavailable and cancelled states and ignores late responses from prior attempts. A caller must use a unique attempt ID for each new attempt. Its clock inputs are for display and must never establish verification validity or checkout authorization. The current checkout block does not use this model or start wallet sessions.
+
 Network access, Storefront API access and progress blocking are disabled. The extension makes no backend requests, retrieves no session tokens, writes no cart metadata and presents no verification button. It does not activate the validation Function.
 
 From the repository root:
