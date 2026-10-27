@@ -46,6 +46,7 @@ export function walletState(state: WalletState, event: WalletEvent): WalletState
     case "VERIFIED": return { phase: "verified", attempt: state.attempt };
     case "REJECTED": return { phase: "rejected", attempt: state.attempt };
     case "FAILED": return { phase: "unavailable", attempt: state.attempt };
+    default: return { phase: "unavailable", attempt: state.attempt };
   }
 }
 

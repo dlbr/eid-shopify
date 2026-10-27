@@ -38,6 +38,13 @@ test("treats expired, invalid or failed sessions as unavailable or expired", () 
   assert.deepEqual(walletState(starting, { type: "error", attempt: "a" }), { phase: "unavailable", attempt: "a" });
 });
 
+test("handles an unexpected runtime status without losing the wallet state", () => {
+  // TypeScript types do not validate data received from an external service.
+  const unexpectedStatus = "NEW_GATEWAY_STATUS" as "PENDING";
+  assert.deepEqual(walletState(pending, { type: "status", attempt: "a", status: unexpectedStatus, now: 2 }),
+    { phase: "unavailable", attempt: "a" });
+});
+
 test("rejects invalid transitions and can reset terminal states", () => {
   assert.deepEqual(walletState(idle, { type: "start", attempt: "" }), idle);
   assert.deepEqual(walletState(idle, { type: "cancel" }), idle);
