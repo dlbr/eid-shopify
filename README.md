@@ -18,4 +18,6 @@ make check
 
 `make check` runs type checks, coverage and browser tests of the extensions using simulated Shopify host signals. `make function-test` builds the Function and executes local Shopify runner fixtures; it requires a linked development app. No GitHub Actions are used. These tests do not establish real-wallet interoperability or successful protected checkout completion.
 
+For Shopify CLI builds, copy `config/shopify.app.toml.example` to the ignored `shopify.app.toml` and fill in the client ID and application URL from a real linked development app. Its extension list excludes the diagnostic cart probe; include that extension only in a separate development configuration. The example is for local builds and is not a deployment configuration. Shopify app versions and backend deployment are managed separately.
+
 The checkout block requires Shopify Plus for information, shipping and payment steps. Follow Shopify documentation for Function and app distribution eligibility. Deployments and app credentials are managed separately by DLBR.
