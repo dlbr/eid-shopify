@@ -5,7 +5,7 @@ name = "DLBR EID"
 application_url = ""
 embedded = true
 # Exclude the diagnostic cart-binding probe from a release configuration.
-extension_directories = ["extensions/age-checkout", "extensions/age-validation", "extensions/age-product-policy"]
+extension_directories = ["extensions/age-checkout", "extensions/age-validation", "extensions/age-product-policy", "extensions/age-product-badge"]
 
 [build]
 automatically_update_urls_on_dev = false

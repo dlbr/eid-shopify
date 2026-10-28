@@ -12,5 +12,19 @@
     "expired": "Die Prüfungssitzung ist abgelaufen. Starte erneut, um es noch einmal zu versuchen.",
     "unavailable": "Die Wallet-Prüfung ist derzeit nicht verfügbar. Bitte versuche es später erneut.",
     "cancelled": "Die Wallet-Prüfung wurde abgebrochen."
+  },
+  "walletModal": {
+    "assetLocale": "de",
+    "heading": "Jetzt verifizieren",
+    "otherDevice": "Du nutzt die d-you Wallet auf einem anderen Gerät? Dann scanne diesen QR-Code.",
+    "qrLabel": "QR-Code zum Öffnen der Wallet-Verifizierungsanfrage",
+    "or": "oder",
+    "thisDevice": "Du nutzt die d-you Wallet auf diesem Gerät?",
+    "openWallet": "Verifizieren mit d-you Wallet",
+    "about": "Was ist die d-you Wallet?"
+  },
+  "walletPilot": {
+    "explanation": "Bestätigen Sie, dass Sie die Altersanforderung erfüllen. Die Wallet-Verifizierung ist eine Entwicklungsvorschau und gibt den Checkout nicht frei.",
+    "signIn": "Melden Sie sich an, um die Wallet-Verifizierungsvorschau zu nutzen."
   }
 }

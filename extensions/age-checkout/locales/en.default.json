@@ -12,5 +12,19 @@
     "expired": "The verification session expired. Start again to retry.",
     "unavailable": "Wallet verification is currently unavailable. Please try again later.",
     "cancelled": "Wallet verification was cancelled."
+  },
+  "walletModal": {
+    "assetLocale": "en",
+    "heading": "Verify now",
+    "otherDevice": "Using the d-you Wallet on another device? Then scan this QR code.",
+    "qrLabel": "Scan to open the wallet verification request",
+    "or": "or",
+    "thisDevice": "Using the d-you Wallet on this device?",
+    "openWallet": "Verify with d-you Wallet",
+    "about": "What is the d-you Wallet?"
+  },
+  "walletPilot": {
+    "explanation": "Confirm that you meet the age requirement. Wallet verification is a development preview and does not approve checkout.",
+    "signIn": "Sign in to use the wallet verification preview."
   }
 }

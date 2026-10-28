@@ -1,0 +1,16 @@
+{% liquid
+  assign age_product = product.metafields['$app'].requires_age_verification.value
+  assign age_store = shop.metafields['$app'].all_products_require_age_verification.value
+%}
+{% if age_product == true or age_store == true %}
+  <p class="dlbr-age-badge">{{ 'age_badge.label' | t | escape }}</p>
+{% endif %}
+
+{% schema %}
+{
+  "name": "18+ product notice",
+  "target": "section",
+  "enabled_on": { "templates": ["product"] },
+  "settings": []
+}
+{% endschema %}
